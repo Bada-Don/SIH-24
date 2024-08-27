@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      'Stylus': ['Stylus BT']
+    },
     extend: {},
   },
   plugins: [],
