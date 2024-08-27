@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background: #3D52A0;
+}
+*{
+  color: aliceblue;
+  font-family: "Swis721 BlkEx BT";
+}
