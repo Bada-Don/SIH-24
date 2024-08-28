@@ -1,7 +1,7 @@
 import logo from '/Logo.png'
 function Navbar() {
     return (
-        <nav className='bg-[#3d52a0] py-[2rem] px-[4rem] flex flex-row justify-between items-center'>
+        <nav className='bg-[#3d52a0] py-[2rem] px-[4rem] flex flex-row justify-between items-center w-[100%]'>
             <div className=" gap-6 logo flex flex-row items-center w-min">
                 <img src={logo} className='h-[4.5rem] w-min' alt="" />
                 <h1 className='text-[2.25rem]'>CrackIt</h1>
