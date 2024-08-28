@@ -6,9 +6,15 @@ export default {
   ],
   theme: {
     fontFamily:{
-      'Stylus': ['Stylus BT']
+      'Stylus': ['Stylus BT'],
+      'Arial': ['Arial']
     },
-    extend: {},
+    extend: {
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '3rem',
+      }
+    },
   },
   plugins: [],
 }

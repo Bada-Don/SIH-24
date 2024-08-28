@@ -11,3 +11,13 @@ body{
   color: aliceblue;
   font-family: "Swis721 BlkEx BT";
 }
+h1{
+  font-family: "Swis721 BlkEx BT";
+}
+p{
+  font-family: "Stylus BT";
+
+}
+.hero{
+  height: calc(100vh - 8.5rem);
+}

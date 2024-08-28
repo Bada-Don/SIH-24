@@ -1,8 +1,16 @@
 import Hero_logo from '/hero.svg'
+import { motion } from "framer-motion";
 
 function Hero() {
+    const sectionVariants = {
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0 }
+    };
+
     return (
-        <section className='absolute z-10 w-[100%] flex flex-row items-center justify-evenly'>
+        
+        <section className='hero w-[100%] flex flex-row items-center justify-evenly'>
+            
             <div className=''>
                 <h1 className='text-[3.5rem] w-[35.125rem] text-wrap'>Your CAREER starts here!</h1>
                 <br />
