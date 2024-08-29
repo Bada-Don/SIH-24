@@ -7,6 +7,9 @@ import './App.css';
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [usersCount, setUsersCount] = useState(420); // Dummy number for users registered
+  const [mentorsCount, setMentorsCount] = useState(100); // Dummy number for mentors available
+  const [companiesCount, setCompaniesCount] = useState(69); // Dummy number for companies connected
 
   const handleButtonClick = () => {
     setIsPopupOpen(true);
@@ -24,7 +27,7 @@ function App() {
       </div>
       <div>
         <br />
-      <Hero />
+      <Hero usersCount={usersCount} mentorsCount={mentorsCount} companiesCount={companiesCount} />
         <br />
       <SignUp isOpen={isPopupOpen} onClose={closePopup}/>
         <br />

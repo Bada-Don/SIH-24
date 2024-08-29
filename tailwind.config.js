@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily:{
       'Stylus': ['Stylus BT'],
+      'Swis': ['Swis721 BlkEx BT'],
       'Arial': ['Arial']
     },
     extend: {
