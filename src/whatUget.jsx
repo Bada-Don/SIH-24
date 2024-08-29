@@ -8,7 +8,7 @@ function Student(){
         <section className='relative flex flex-row justify-center items-center gap-32'>
             <img src={student_logo} alt="" srcset="" />
             <div className='flex flex-col gap-20'>
-                <h1 className='text-[2.5rem]'>Students / Job Seeker</h1>
+                <h1 className='text-[2.5rem]'>Graduates</h1>
                 <p className='font-Stylus text-[2.2rem] leading-extra-loose text-right'>AI-Driven Job Matches
                     <br />
                     Diverse Internship Listings
@@ -28,7 +28,7 @@ function Mentor() {
         <section className='relative flex flex-row justify-center items-center gap-32'>
 
             <div>
-                <h1 className='text-[2.5rem]'>Students / Job Seeker</h1>
+                <h1 className='text-[2.5rem]'>Mentors</h1>
                 <p className='font-Stylus text-[2.2rem] leading-extra-loose text-left'>AI-Driven Job Matches
                     Connect with Talent
                     <br />
@@ -53,7 +53,7 @@ function Company() {
 
             <img src={company} alt="" srcset="" />
             <div>
-                <h1 className='text-[2.5rem]'>Students / Job Seeker</h1>
+                <h1 className='text-[2.5rem]'>Companies/Employer</h1>
                 <p className='font-Stylus text-[2.2rem] leading-extra-loose text-left'>
                     AI-Powered Hiring
                     <br />

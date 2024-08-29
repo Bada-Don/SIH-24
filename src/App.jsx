@@ -6,9 +6,19 @@ import SignUp from './signup';
 import './App.css';
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
-    <>
-      <Navbar />
+    <div className='flex flex-col justify-center items-center'>
+      <Navbar onSignUpClick={handleButtonClick} />
       <div className='absolute top-0 w-full -z-10'> 
         <img src="bg.svg" alt="Background" />
       </div>
@@ -16,11 +26,11 @@ function App() {
         <br />
       <Hero />
         <br />
-      <SignUp />
+      <SignUp isOpen={isPopupOpen} onClose={closePopup}/>
         <br />
       <WhatUget/>
       </div>
-    </>
+    </div>
   );
 }
 
