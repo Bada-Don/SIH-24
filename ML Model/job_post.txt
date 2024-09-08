@@ -1,0 +1,5 @@
+    Bachelor’s degree or equivalent practical experience.
+    1 year of experience with software development in one or more programming languages (e.g., Python, C, C++, Java, JavaScript).
+
+    Master's degree or PhD in Computer Science or related technical field.
+    Experience developing accessible technologies.
