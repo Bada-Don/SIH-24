@@ -1,39 +1,18 @@
-import { useState } from 'react';
-import Navbar from './navbar';
-import Hero from './hero';
-import WhatUget from './whatUget';
-import SignUp from './signup';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Signup from './pages/signup';
+import Home from './pages/Home';  // Home or any other component
 
 function App() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [usersCount, setUsersCount] = useState(420); // Dummy number for users registered
-  const [mentorsCount, setMentorsCount] = useState(100); // Dummy number for mentors available
-  const [companiesCount, setCompaniesCount] = useState(69); // Dummy number for companies connected
-
-  const handleButtonClick = () => {
-    setIsPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
-
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <Navbar onSignUpClick={handleButtonClick} />
-      <div className='absolute top-0 w-full -z-10'> 
-        <img src="bg.svg" alt="Background" />
-      </div>
-      <div>
-        <br />
-      <Hero usersCount={usersCount} mentorsCount={mentorsCount} companiesCount={companiesCount} />
-        <br />
-      <SignUp isOpen={isPopupOpen} onClose={closePopup}/>
-        <br />
-      <WhatUget/>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/home" element={<Home />} />
+        {/* Add other routes as needed */}
+      </Routes>
+    </Router>
   );
 }
 
