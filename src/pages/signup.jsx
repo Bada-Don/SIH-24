@@ -12,7 +12,7 @@ function App() {
       {/* Text Section */}
       <div className="absolute left-20 top-0 bottom-0 flex items-center p-6">
         <div className="max-w-2xl space-y-8 text-left">
-          <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-6xl md:text-5xl font-bold text-white leading-tight">
             Get the <span className="text-purple-500">best engineering minds</span> to bring your product vision to life.
           </h1>
         </div>
