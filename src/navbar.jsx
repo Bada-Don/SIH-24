@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
-import droparrow from '/droparrow.svg'; // Make sure the path is correct
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import droparrow from '/droparrow.svg';
+import { Link } from 'react-router-dom'; 
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
