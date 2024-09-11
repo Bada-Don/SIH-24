@@ -69,7 +69,7 @@ function LoginPage() {
             </p>
           </form>
           <div className="mt-6 text-center">
-            <a href="#" className="text-purple-500 text-xl hover:underline">Don't have an account? Sign Up</a>
+            <a href="/signup" className="text-purple-500 text-xl hover:underline">Don't have an account? Sign Up</a>
           </div>
         </div>
       </div>

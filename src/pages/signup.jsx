@@ -55,7 +55,7 @@ function App() {
             </p>
           </form>
           <div className="mt-6 text-center">
-            <a href="#" className="text-purple-500 hover:underline">Already have an account? Login</a>
+            <a href="/login" className="text-purple-500 hover:underline">Already have an account? Login</a>
           </div>
         </div>
       </div>

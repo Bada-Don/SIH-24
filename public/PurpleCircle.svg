@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #111012;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="125" y="-836" width="1671" height="1672" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="83.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#7c35c7" flood-opacity="0.81"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+      <feGaussianBlur result="blur-2" stdDeviation="51.667" in="SourceAlpha"/>
+      <feFlood result="flood-2" flood-color="#7c35c7" flood-opacity="0.35"/>
+      <feComposite result="composite-6" operator="out" in2="blur-2"/>
+      <feComposite result="composite-5" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-3" in2="blend-2"/>
+    </filter>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <ellipse class="cls-1" cx="960.5" rx="583.5" ry="583.5"/>
+  </g>
+</svg>
