@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from '../navbar';
-import jobData from 'jobData.json'; // Assuming your jobData.json is in the same folder
+import jobData from '../pages/jobData.json'; 
 
 function Jobs() {
     return (
