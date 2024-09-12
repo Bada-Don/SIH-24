@@ -56,13 +56,13 @@ function LoginPage() {
               />
             </div>
             <Link to='/profile'>
-            <button
-              type="submit"
-              className="w-full bg-purple-700 hover:bg-purple-600 text-white text-xl font-Arial font-bold py-5 rounded"
+              <button
+                type="submit"
+                className="w-full bg-purple-700 hover:bg-purple-600 text-white font-bold py-5 rounded"
               >
-              Login
-            </button>
-              </Link>
+                Login
+              </button>
+            </Link>
             <p className="text-l mt-4 text-gray-400">
               By logging in, you acknowledge that you have read and agreed to our{" "}
               <a href="#" className="underline">Terms of Service</a> and{" "}
