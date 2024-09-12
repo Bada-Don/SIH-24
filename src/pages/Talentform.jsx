@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Select from "react-select";
 
 const TalentForm = () => {
   const [selectedSkills, setSelectedSkills] = useState([]);
 
-  // Options for the technical skills dropdown
+  // Options for the technical skills dropdown  
   const skillsOptions = [
     { value: "NodeJS", label: "NodeJS" },
     { value: "ReactJS", label: "ReactJS" },
@@ -124,17 +123,18 @@ const TalentForm = () => {
             {/* Technical Skills Multi-select Dropdown */}
             <div>
               <label className="block text-gray-400 font-light">My Technical Skills*</label>
-              <Select
-                isMulti
-                name="skills"
-                options={skillsOptions}
-                className="w-full bg-gray-800 font-Arial text-white rounded"
-                classNamePrefix="select"
-                value={selectedSkills} // Controlled component for selected options
-                onChange={(selected) => setSelectedSkills(selected)} // Update selected skills
-                placeholder="Select Technical Skills" // Placeholder
-                closeMenuOnSelect={false} // Keep menu open for multiple selections
-              />
+              <select
+                multiple
+                value={selectedSkills}
+                onChange={(e) => setSelectedSkills(Array.from(e.target.selectedOptions, option => option.value))}
+                className="w-full p-3 bg-gray-800 font-Arial text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                {skillsOptions.map((skill) => (
+                  <option key={skill.value} value={skill.value}>
+                    {skill.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <button

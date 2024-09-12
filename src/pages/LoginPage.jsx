@@ -1,21 +1,22 @@
 import React from "react";
-
+import Header from "../components/Header";
 function LoginPage() {
   return (
     <div
-      className="flex flex-col md:flex-row min-h-screen relative bg-gradient-to-b from-[#0a0a12] to-[#0b0b15] text-white"
+      className="flex flex-col md:flex-row min-h-screen relative bg-gradient-to-b from-[#07030d] to-[#100725] text-white"
     >
+      <Header />
       {/* Text Section */}
       <div className="md:w-1/2 flex items-center p-6 md:p-12">
         <div className="max-w-2xl space-y-6 text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
             Welcome Back! <span className="text-purple-500">Login to your account</span>
           </h1>
         </div>
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-1/2 flex items-center justify-center px-4">
+      <div className="w-full md:w-1/2 flex mt-9 items-center justify-center px-4">
         <div className="w-full max-w-2xl min-h-[600px] bg-black p-6 md:p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 md:mb-6 text-left font-Arial">
             Login to Your Account
