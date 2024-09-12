@@ -56,6 +56,10 @@ p {
   font-family: 'Stylus BT', Verdana, sans-serif; /* Fix typo and add fallback */
 }
 
+.active{
+  background: #632aa0;
+}
+
 .hero {
   height: calc(100vh - 22rem);
 }

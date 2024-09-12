@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './pages/signup';
-import Home from './pages/Home';  // Home or any other component
-import Login from './pages/LoginPage';  // Home or any other component
+import Home from './pages/Home';  
+import Login from './pages/LoginPage';  
 import Jobs from './pages/jobListing';
 import TalentForm from './pages/Talentform';
 import JobApplicationStatus from './pages/application status';
 import Courses from './pages/coursepage';
+import Profile from './pages/profile';
+
 function App() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function App() {
         <Route path="/application status" element={<JobApplicationStatus />} />
         <Route path="/courses" element={<Courses/>} />
         {/* Add other routes as needed */}
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header"; 
+import { Link } from 'react-router-dom';
 
 function App() {
   // State to handle form submission and validation
@@ -46,10 +47,10 @@ function App() {
               <>
                 <div className="flex justify-between items-center mb-6">
                   <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" className="h-8 sm:h-10 hover:scale-105 transition-transform duration-300" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" className="h-8 sm:h-10 hover:scale-105 transition-transform duration-300" />
                   </a>
                   <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="h-8 sm:h-10 hover:scale-105 transition-transform duration-300" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn logo" className="h-8 sm:h-10 hover:scale-105 transition-transform duration-300" />
                   </a>
                 </div>
 
@@ -69,7 +70,7 @@ function App() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-b from-[#8484b5] to-[#82829a] font-Arial text-2xl hover:bg-indigo-900 text-black font-bold py-4 sm:py-5 rounded transition-transform transform hover:scale-105"
+                    className="w-full bg-gradient-to-b from-[#8484b5] to-[#82829a] text-2xl text-black font-bold py-4 sm:py-5 rounded transition-transform transform hover:scale-105"
                   >
                     Hire Now
                   </button>
@@ -86,7 +87,7 @@ function App() {
 
             {!submitted && (
               <div className="mt-6 text-center">
-                <a href="/login" className="text- hover:underline">Already have an account? Login</a>
+                <Link to="/login" className="text-purple-500 hover:underline">Already have an account? Login</Link>
               </div>
             )}
           </div>

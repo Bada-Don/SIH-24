@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
+import { Link } from 'react-router-dom';
+
 function LoginPage() {
   return (
     <div
@@ -23,18 +25,16 @@ function LoginPage() {
           </h2>
 
           <div className="flex justify-between items-center mb-6">
-            <img 
-              src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
-              alt="Google" 
-              className="h-8 sm:h-10 cursor-pointer" 
-              onClick={() => window.location.href = "https://your-backend.com/auth/google"}
-            />
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" 
-              alt="LinkedIn" 
-              className="h-8 sm:h-10 cursor-pointer" 
-              onClick={() => window.location.href = "https://your-backend.com/auth/linkedin"}
-            />
+            <Link to="/profile" aria-label="Sign in with Google">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" className="h-10" />
+              </button>
+            </Link>
+            <Link to="/profile" aria-label="Sign in with LinkedIn">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn logo" className="h-10" />
+              </button>
+            </Link>
           </div>
 
           <div className="text-center text-gray-400 text-base sm:text-lg mb-6 md:mb-8">or</div>
@@ -46,6 +46,7 @@ function LoginPage() {
                 placeholder="name@work.com"
                 className="w-full mb-3 p-4 sm:p-5 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
+                aria-label="Email"
               />
             </div>
             <div>
@@ -54,14 +55,17 @@ function LoginPage() {
                 placeholder="Password"
                 className="w-full mb-3 p-4 sm:p-5 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
+                aria-label="Password"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full bg-purple-700 hover:bg-purple-600 text-white text-lg sm:text-xl font-Arial font-bold py-4 sm:py-5 rounded"
-            >
-              Login
-            </button>
+            <Link to='/profile'>
+              <button
+                type="submit"
+                className="w-full bg-purple-700 hover:bg-purple-600 text-white text-lg sm:text-xl font-Arial font-bold py-4 sm:py-5 rounded"
+              >
+                Login
+              </button>
+            </Link>
             <p className="text-base sm:text-lg mt-4 text-gray-400">
               By logging in, you acknowledge that you have read and agreed to our{" "}
               <a href="#" className="underline">Terms of Service</a> and{" "}
@@ -70,9 +74,9 @@ function LoginPage() {
           </form>
 
           <div className="mt-6 text-center">
-            <a href="/signup" className="text-purple-500 text-lg sm:text-xl hover:underline">
-              Don't have an account? Sign Up
-            </a>
+            <Link to="/signup">
+              <button className="text-purple-500 hover:underline">Don't have an account? Sign Up</button>
+            </Link>
           </div>
         </div>
       </div>
