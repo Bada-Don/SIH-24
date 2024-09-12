@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import droparrow from '/droparrow.svg';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -33,8 +33,10 @@ function NavBar() {
             </ul>
             {/* Buttons */}
             <div className="flex gap-5 items-center">
-                <Link to="/jobs">
-                    <button className='max-xl:hidden px-[1.5rem] py-[.25rem] rounded-xl border-[1px] border-slate-500 hover:bg-[#29282a] hover:border-white'>Find Jobs</button>
+                <Link to="/login">
+                    <button className='max-xl:hidden px-[1.5rem] py-[.25rem] rounded-xl border-[1px] border-slate-500 hover:bg-[#29282a] hover:border-white'>
+                        Find Jobs
+                    </button>
                 </Link>
                 <Link to="/signup">
                     <button className='px-[1.5rem] py-[.25rem] max-sm:mx-7 rounded-xl bg-[#7c35c7] hover:bg-[#4d217b] max-sm:px-[1.2rem] max-sm:text-[0.7rem] max-sm:rounded-lg'>

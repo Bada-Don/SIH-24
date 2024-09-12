@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -25,12 +26,17 @@ function App() {
             Connect with Top Engineers
           </h2>
           <div className="flex justify-between items-center mb-6">
-            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" className="h-10" />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="h-10" />
-            </a>
+            <Link to="/profile">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" className="h-10" />
+              </button>
+            </Link>
+            <Link to="/profile">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="h-10" />
+              </button>
+            </Link>
+
           </div>
           <div className="text-center text-gray-400 text-xl mb-8">or</div>
           <form className="space-y-6">
@@ -42,12 +48,14 @@ function App() {
                 required
               />
             </div>
-            <button
-              type="submit"
-              className="w-full bg-purple-700 hover:bg-purple-600 text-white font-bold py-5 rounded"
-            >
-              Hire Now
-            </button>
+            <Link to='/profile'>
+              <button
+                type="submit"
+                className="w-full bg-purple-700 hover:bg-purple-600 text-white font-bold py-5 rounded"
+              >
+                Sign Up
+              </button>
+            </Link>
             <p className="text-sm mt-4 text-gray-400">
               By submitting, you acknowledge that you have read and agreed to our{" "}
               <a href="#" className="underline">Terms of Service</a> and{" "}
@@ -55,7 +63,9 @@ function App() {
             </p>
           </form>
           <div className="mt-6 text-center">
-            <a href="/login" className="text-purple-500 hover:underline">Already have an account? Login</a>
+            <Link to="/login">
+              <button className="text-purple-500 hover:underline">Already have an account? Login</button>
+            </Link>
           </div>
         </div>
       </div>

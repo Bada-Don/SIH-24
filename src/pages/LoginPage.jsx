@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function LoginPage() {
   return (
@@ -25,18 +26,16 @@ function LoginPage() {
             Login to Your Account
           </h2>
           <div className="flex justify-between items-center mb-6">
-            <img 
-              src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
-              alt="Google" 
-              className="h-10 cursor-pointer" 
-              onClick={() => window.location.href = "https://your-backend.com/auth/google"}
-            />
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" 
-              alt="LinkedIn" 
-              className="h-10 cursor-pointer" 
-              onClick={() => window.location.href = "https://your-backend.com/auth/linkedin"}
-            />
+            <Link to="/profile">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google" className="h-10" />
+              </button>
+            </Link>
+            <Link to="/profile">
+              <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="h-10" />
+              </button>
+            </Link>
           </div>
           <div className="text-center text-gray-400 text-xl mb-8">or</div>
           <form className="space-y-6">
@@ -56,12 +55,14 @@ function LoginPage() {
                 required
               />
             </div>
+            <Link to='/profile'>
             <button
               type="submit"
               className="w-full bg-purple-700 hover:bg-purple-600 text-white text-xl font-Arial font-bold py-5 rounded"
-            >
+              >
               Login
             </button>
+              </Link>
             <p className="text-l mt-4 text-gray-400">
               By logging in, you acknowledge that you have read and agreed to our{" "}
               <a href="#" className="underline">Terms of Service</a> and{" "}
@@ -69,7 +70,9 @@ function LoginPage() {
             </p>
           </form>
           <div className="mt-6 text-center">
-            <a href="/signup" className="text-purple-500 text-xl hover:underline">Don't have an account? Sign Up</a>
+            <Link to="/signup">
+              <button className="text-purple-500 hover:underline">Don't have an account? Sign Up</button>
+            </Link>
           </div>
         </div>
       </div>
