@@ -6,7 +6,6 @@ import Login from './pages/LoginPage';  // Home or any other component
 import Jobs from './pages/jobListing';
 import TalentForm from './pages/Talentform';
 import JobApplicationStatus from './pages/application status';
-import JobDetails from './pages/JobDetails';
 import Courses from './pages/coursepage';
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/talentform" element={<TalentForm />} />
         <Route path="/application status" element={<JobApplicationStatus />} />
-        <Route path="/jobdetails" element={<JobDetails />} />
         <Route path="/courses" element={<Courses/>} />
         {/* Add other routes as needed */}
       </Routes>
