@@ -6,7 +6,7 @@ function LoginPage() {
     <div
     className="text-white min-h-screen relative"
     style={{
-      backgroundColor: "#0b0b15",
+      backgroundColor: "black",
       backgroundImage: "linear-gradient(to bottom, #0a0a12, #0b0b15)",
     }}
     >
@@ -14,7 +14,7 @@ function LoginPage() {
       {/* Text Section */}
       <div className="absolute left-20 top-0 bottom-0 flex items-center p-6">
         <div className="max-w-2xl space-y-8 text-left">
-          <h1 className="text-4xl md:text-7xl font-bold text-white font-Arial">
+          <h1 className="text-4xl md:text-7xl font-bold text-white ">
             Welcome Back! <span className="text-purple-500">Login to your account</span>
           </h1>
         </div>

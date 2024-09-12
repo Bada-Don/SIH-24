@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Header from "../Header";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         backgroundImage: "linear-gradient(to bottom, #0a0a12, #0b0b15)",
       }}
     >
+      <Header/>
       {/* Text Section */}
       <div className="absolute left-20 top-0 bottom-0 flex items-center p-6">
         <div className="max-w-2xl space-y-8 text-left">

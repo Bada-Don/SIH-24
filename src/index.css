@@ -3,24 +3,10 @@
 @tailwind utilities;
 
 /* Define font-face for both custom fonts */
-@font-face {
-  font-family: 'Swis721 BlkEx BT';
-  src: url('src/Fonts/swis721-blkex-bt.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Stylus BT';
-  src: url('src/Fonts/stylu.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.dela-gothic-one-regular {
-  font-family: "Dela Gothic One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
 
@@ -33,69 +19,87 @@ body {
 
 * {
   color: aliceblue;
-  font-family: 'Swis721 BlkEx BT', Dela Gothic One, sans-serif; /* Add a fallback font */
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h1 {
-  font-family: 'Swis721 BlkEx BT', Dela Gothic One, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
   font-size: 3.5rem;
 }
 
 h2 {
   
-  font-family: 'Swis721 BlkEx BT', Dela Gothic One;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
   font-size: 2rem;
 }
 
 h3 {
-  font-family: 'Swis721 BlkEx BT', Dela Gothic One, sans-serif;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
 }
 
 p {
-  font-family: 'Stylus BT', Verdana, sans-serif; /* Fix typo and add fallback */
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.active{
+.active {
   background: #632aa0;
 }
 
 .hero {
   height: calc(100vh - 22rem);
 }
+
 .sticky-categories {
   position: sticky;
-  top: 0; /* Keeps the categories section at the top */
-  align-self: flex-start; /* Ensures it stays on the left side */
-  background-color: #1a1a1a; /* Ensure a background so it doesn't overlap */
-  z-index: 100; /* So it stays above other content when scrolling */
+  top: 0;
+  /* Keeps the categories section at the top */
+  align-self: flex-start;
+  /* Ensures it stays on the left side */
+  background-color: #1a1a1a;
+  /* Ensure a background so it doesn't overlap */
+  z-index: 100;
+  /* So it stays above other content when scrolling */
 }
 
 .scrollable-jobs {
-  max-height: 80vh; /* Adjust height to allow scroll */
-  overflow-y: auto; /* Enables scroll for this section */
-  width: 70%; /* Adjust width as per your design */
+  max-height: 80vh;
+  /* Adjust height to allow scroll */
+  overflow-y: auto;
+  /* Enables scroll for this section */
+  width: 70%;
+  /* Adjust width as per your design */
   padding-left: 20px;
 }
+
 /* For WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 8px; /* Adjust width of the scrollbar */
+  width: 8px;
+  /* Adjust width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #2d2d2d; /* Track color */
+  background: #2d2d2d;
+  /* Track color */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #833fd4; /* Scrollbar color */
-  border-radius: 10px; /* Round edges */
-  border: 2px solid #2d2d2d; /* Space between track and thumb */
+  background-color: #833fd4;
+  /* Scrollbar color */
+  border-radius: 10px;
+  /* Round edges */
+  border: 2px solid #2d2d2d;
+  /* Space between track and thumb */
 }
 
 /* For Firefox */
 * {
-  scrollbar-width: thin; /* Makes scrollbar thinner */
-  scrollbar-color: #833fd4 #2d2d2d; /* Thumb and track color */
+  scrollbar-width: thin;
+  /* Makes scrollbar thinner */
+  scrollbar-color: #833fd4 #2d2d2d;
+  /* Thumb and track color */
 }
-
