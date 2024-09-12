@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SecondaryNavBar from './secNavBar';
+import SecondaryNavBar from '../secNavBar';
 import Jobs from './jobListing';
 import SkillsTable from '../techSkills';
 import ProfileInfo from '../personalInfo';

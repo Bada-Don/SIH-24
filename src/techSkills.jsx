@@ -1,12 +1,20 @@
 import { useState } from 'react';
+import Modal from './modal';
+import ResultModal from './resultModal';
+import NewJobsModal from './NewJobsModal';  // Modal for Job Recommendations
 
 const SkillsTable = () => {
     const allSkills = ['ExpressJS', 'Graphic Design', 'JavaScript', 'MongoDB', 'MySQL', 'NodeJS', 'ReactJS']; // predefined skills
 
     const [skills, setSkills] = useState([
-        { name: 'ExpressJS', isTechnical: false },
-        { name: 'JavaScript', isTechnical: false },
+        { name: 'ExpressJS', isTechnical: true },
+        { name: 'JavaScript', isTechnical: true },
     ]);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);  // State to control first modal
+    const [isResultModalOpen, setIsResultModalOpen] = useState(false);  // State to control result modal
+    const [isNewJobsModalOpen, setIsNewJobsModalOpen] = useState(false);  // State to control job modal
+    const [attemptNumber, setAttemptNumber] = useState(0);  // State to track the number of attempts
 
     const handleSkillChange = (index, event) => {
         const newSkills = [...skills];
@@ -29,7 +37,29 @@ const SkillsTable = () => {
         setSkills(newSkills);
     };
 
-    // Centralized styles for the table
+    const handleSaveClick = () => {
+        setIsModalOpen(true);  // Open first modal when "Save" is clicked
+    };
+
+    const handleAttemptNow = () => {
+        setIsModalOpen(false);  // Close skill verification modal
+        setAttemptNumber(attemptNumber + 1);  // Increment attempt count
+        setIsResultModalOpen(true);  // Open result modal
+    };
+
+    const handleCloseResultModal = () => {
+        setIsResultModalOpen(false);  // Close result modal
+    };
+
+    const handlePassTest = () => {
+        setIsResultModalOpen(false);  // Close result modal
+        setIsNewJobsModalOpen(true);  // Open jobs modal if passed
+    };
+
+    const handleCloseJobsModal = () => {
+        setIsNewJobsModalOpen(false);  // Close the jobs modal
+    };
+
     const tableStyles = 'w-full text-left text-white bg-transparent ';
 
     return (
@@ -98,10 +128,18 @@ const SkillsTable = () => {
                     </tbody>
                 </table>
             </div>
+
             <button
-                className='max-xl:hidden w-fit px-[1.5rem] py-[.25rem]  rounded-xl bg-[#7c35c7] hover:bg-[#4d217b] text-xl'>
+                onClick={handleSaveClick}  // Open verification modal when Save is clicked
+                className='max-xl:hidden w-fit px-[1.5rem] py-[.25rem]  rounded-xl bg-[#7c35c7] hover:bg-[#4d217b] text-xl'
+            >
                 Save
             </button>
+
+            {/* Modal Components */}
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onAttemptNow={handleAttemptNow} />
+            <ResultModal isOpen={isResultModalOpen} onClose={handleCloseResultModal} onPass={handlePassTest} attemptNumber={attemptNumber} />
+            <NewJobsModal isOpen={isNewJobsModalOpen} onClose={handleCloseJobsModal} />
         </section>
     );
 };
