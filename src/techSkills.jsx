@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from './modal';
 import ResultModal from './resultModal';
-import NewJobsModal from './NewJobsModal';  // Modal for Job Recommendations
+import NewJobsModal from './newJobsModal';  // Modal for Job Recommendations
 
 const SkillsTable = () => {
     const allSkills = ['ExpressJS', 'Graphic Design', 'JavaScript', 'MongoDB', 'MySQL', 'NodeJS', 'ReactJS']; // predefined skills
