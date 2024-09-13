@@ -1,5 +1,5 @@
 import courses from "./courseListing";
-const RecommendedCourses = () => {
+function RecommendedCourses() {
  
     return (
       <div className="bg-[#0d0d0d] text-white min-h-screen flex">
@@ -85,5 +85,5 @@ const RecommendedCourses = () => {
     );
   };
   
-  export default RecommendedCourses;
+export default RecommendedCourses;
   

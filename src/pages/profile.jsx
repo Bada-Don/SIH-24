@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SecondaryNavBar from '../secNavBar';
 import Jobs from './jobListing';
-import RecommendedCourses from '../courseListing';
+import RecommendedCourses from './courseListing.jsx';
 import SkillsTable from '../techSkills';
 import ProfileInfo from '../personalInfo';
 import ProfileOverview from '../profileOverview';
