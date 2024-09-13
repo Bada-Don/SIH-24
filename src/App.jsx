@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Signup from './pages/signup';
-import Home from './pages/Home';  // Home or any other component
-import Login from './pages/LoginPage';  // Home or any other component
+import Home from './pages/Home';
+import Login from './pages/LoginPage';
 import Jobs from './pages/jobListing';
 import Profile from './pages/profile';
 import JobAppStat from './pages/application status';
+import TestPage from './pages/testPage';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/courses" element={<Navigate to="/profile" state={{ activeTab: 'courses' }} />} />
         <Route path="/application" element={<JobAppStat />} />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </Router>
   );
