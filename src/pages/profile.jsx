@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SecondaryNavBar from '../secNavBar';
 import Jobs from './jobListing';
+import RecommendedCourses from '../courseListing';
 import SkillsTable from '../techSkills';
 import ProfileInfo from '../personalInfo';
 import ProfileOverview from '../profileOverview';
@@ -113,7 +114,7 @@ function Profile() {
                                 {activeProfileSection === 'education' && <EducationSection />}
                             </>
                         )}
-                        {activeTab === 'courses' && <Jobs />}
+                        {activeTab === 'courses' && <RecommendedCourses />}
                         {activeTab === 'jobs' && <Jobs />}
                     </section>
                 </section>
