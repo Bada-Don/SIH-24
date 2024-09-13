@@ -12,7 +12,7 @@ function Features() {
 
                     <p className='font-bold max-xl:text-sm'>Quality talent</p>
                     <h2 className=' max-xl:text-xl'>Access pre-vetted quality engineers</h2>
-                    <p className=' max-xl:text-sm'>Stop evaluating 100s of candidates and directly get access to Flexiple’s talent who are carefully vetted through an extensive screening process.</p>
+                    <p className=' max-xl:text-sm'>Stop evaluating 100s of candidates and directly get access to Nayi Disha's talent who are carefully vetted through an extensive screening process.</p>
                 </div>
             </div>
         </div>

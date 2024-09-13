@@ -128,7 +128,7 @@ const ExperienceForm = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           className={`w-full p-2 bg-transparent border ${getInputBorderClass('companyName')}`}
-          placeholder="Eg: Flexiple"
+          placeholder="Eg: Nayi Disha"
           required
         />
       </label>
