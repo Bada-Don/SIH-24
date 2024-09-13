@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ResultModal = ({ score, percentage, onClose }) => {
-    // Check if score is undefined and provide a default empty object
+    const navigate = useNavigate();
     const safeScore = score || {};
+
+    const handleTakeTest = () => {
+        navigate('/test');
+        onClose();
+    };
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -22,10 +28,18 @@ const ResultModal = ({ score, percentage, onClose }) => {
                         </p>
                     </>
                 ) : (
-                    <p>No test results available.</p>
+                    <>
+                        <p>No test results available.</p>
+                        <button 
+                            className="bg-purple-600 text-white py-2 px-4 rounded mt-4 mr-2 hover:bg-purple-700 transition-colors"
+                            onClick={handleTakeTest}
+                        >
+                            Take Test
+                        </button>
+                    </>
                 )}
                 <button 
-                    className="bg-purple-600 text-white py-2 px-4 rounded mt-4 hover:bg-purple-700 transition-colors"
+                    className="bg-gray-600 text-white py-2 px-4 rounded mt-4 hover:bg-gray-700 transition-colors"
                     onClick={onClose}
                 >
                     Close
