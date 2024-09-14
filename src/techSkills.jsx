@@ -137,9 +137,15 @@ const SkillsTable = () => {
             </button>
 
             {/* Modal Components */}
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onAttemptNow={handleAttemptNow} />
-            <ResultModal isOpen={isResultModalOpen} onClose={handleCloseResultModal} onPass={handlePassTest} attemptNumber={attemptNumber} />
-            <NewJobsModal isOpen={isNewJobsModalOpen} onClose={handleCloseJobsModal} />
+            {isModalOpen && (
+                <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onAttemptNow={handleAttemptNow} />
+            )}
+            {isResultModalOpen && (
+                <ResultModal isOpen={isResultModalOpen} onClose={handleCloseResultModal} onPass={handlePassTest} attemptNumber={attemptNumber} />
+            )}
+            {isNewJobsModalOpen && (
+                <NewJobsModal isOpen={isNewJobsModalOpen} onClose={handleCloseJobsModal} />
+            )}
         </section>
     );
 };
