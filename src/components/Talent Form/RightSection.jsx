@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const RightSection = () => {
     return (
-        <div className="flex-1 p-5 md:p-5 bg-transparent flex flex-col justify-center">
+        <div className="xl:-mt-20 flex-1 p-5 md:p-5 bg-transparent flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="border border-gray-700 p-6 rounded-lg max-w-2xl mx-auto bg-[#1a1a24]">
                 <h2 className="text-3xl font-light mb-6 text-center">Let’s get you hired!</h2>
                 <form className="space-y-6">
@@ -105,7 +105,7 @@ const RightSection = () => {
                     <Link to="/login">
                         <button className="text-purple-500 hover:underline">Already have an account? Login</button>
                     </Link>
-                    <p className="text-sm text-gray-400 mt-4 font-Arial">
+                    <p className="text-sm text-gray-400 font-Arial m-0">
                         By submitting, you acknowledge that you have read and agreed to our{" "}
                         <a href="#" className="underline">Terms of Service</a> and{" "}
                         <a href="#" className="underline">Privacy Policy</a>.
