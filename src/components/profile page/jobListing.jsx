@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from '../navbar';
+import NavBar from '../home page/navbar.jsx';
 import jobsData from './jobData.js';
 import Header from "../Header.jsx";
 import { Link } from 'react-router-dom';

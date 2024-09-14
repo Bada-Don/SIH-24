@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavBar from '../navbar';
-import Header from "../Header.jsx";
-import ResultModal from '../resultModal.jsx';
-import MCQ from './mcqQues.jsx';
-import CodingQuestion from './codingQues.jsx';
+import NavBar from '../components/home page/navbar.jsx';
+import Header from "../components/Header.jsx";
+import ResultModal from '../components/test page/resultModal.jsx';
+import MCQ from '../components/test page/mcqQues.jsx';
+import CodingQuestion from '../components/test page/codingQues.jsx';
 
 const TestPage = () => {
     const navigate = useNavigate();

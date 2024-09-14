@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import SecondaryNavBar from '../secNavBar';
-import Jobs from './jobListing';
-import RecommendedCourses from './courseListing.jsx';
-import SkillsTable from '../techSkills';
-import ProfileInfo from '../personalInfo';
-import ProfileOverview from '../profileOverview';
-import ExperienceForm from '../experience';
-import EducationSection from '../education';
-import Header from '../Header';
+import SecondaryNavBar from '../components/profile page/secNavBar.jsx';
+import Jobs from '../components/profile page/jobListing.jsx';
+import RecommendedCourses from '../components/profile page/courseListing.jsx';
+import SkillsTable from '../components/profile page/techSkills.jsx';
+import ProfileInfo from '../components/profile page/personalInfo.jsx';
+import ProfileOverview from '../components/profile page/profileOverview.jsx';
+import ExperienceForm from '../components/profile page/experience.jsx';
+import EducationSection from '../components/profile page/education.jsx';
+import Header from "../components/Header.jsx";
 
 const ProgressBar = ({ progress }) => {
     return (

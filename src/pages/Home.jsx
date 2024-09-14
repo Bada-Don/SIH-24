@@ -1,8 +1,8 @@
 import React from 'react';
-import NavBar from '../navbar';
-import Hero from '../hero';
-import Companies from '../companies';
-import Features from '../features';
+import NavBar from '../components/home page/navbar';
+import Hero from '../components/home page/hero';
+import Companies from '../components/home page/companies';
+import Features from '../components/home page/features';
 
 function Home() {
   return (

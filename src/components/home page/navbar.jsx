@@ -33,7 +33,7 @@ function NavBar() {
             </ul>
             {/* Buttons */}
             <div className="flex gap-5 items-center">
-                <Link to="/login">
+                <Link to="/talent">
                     <button className='max-xl:hidden px-[1.5rem] py-[.25rem] rounded-xl border-[1px] border-slate-500 hover:bg-[#29282a] hover:border-white'>
                         Find Jobs
                     </button>
