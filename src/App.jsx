@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Signup from './pages/signup';
 import Home from './pages/Home';
@@ -22,6 +25,7 @@ function App() {
         <Route path="/application" element={<JobAppStat />} />
         <Route path="/test" element={<TestPage />} />
         <Route path="/talent" element={<TalentForm />} />
+        <Route path="/speedinsights" element={<SpeedInsights />} />
       </Routes>
     </Router>
   );
