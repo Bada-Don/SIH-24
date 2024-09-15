@@ -9,10 +9,11 @@ const MCQ = ({ question, options, correctAnswer, onScore }) => {
 
     const handleSubmit = () => {
         if (selectedOption === correctAnswer) {
-            onScore(100); // Full marks for correct answer
+            onScore(100); 
         } else {
-            onScore(0); // No marks for incorrect answer
+            onScore(0); 
         }
+        // You might want to add logic to disable the button after submission or provide feedback to the user.
     };
 
     return (

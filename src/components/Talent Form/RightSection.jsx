@@ -36,6 +36,7 @@ const RightSection = () => {
                             placeholder="name@mail.com"
                             className="w-full p-3 bg-gray-800 font-Arial text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
+                            autoComplete='email'
                         />
                     </div>
                     <div>
@@ -45,6 +46,7 @@ const RightSection = () => {
                             placeholder="Set Password"
                             className="w-full p-3 bg-gray-800 font-Arial text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
+                            autoComplete='current-password'
                         />
                     </div>
                     <div>
@@ -93,7 +95,7 @@ const RightSection = () => {
                         </div>
                     </div>
                     <SkillSelector />
-                    <Link>
+                    <Link to="/profile">
                         <br />
                         <button
                             type="submit"
