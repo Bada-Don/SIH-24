@@ -57,12 +57,12 @@ function Profile() {
     return (
         <>
             <Header />
-            <section className="flex flex-col w-full min-h-screen bg-gray-900 text-white">
+            <section className="flex flex-col w-full min-h-screen -my-24 text-white">
                 <SecondaryNavBar activeTab={activeTab} setActiveTab={setActiveTab} />
                 
                 <section className="flex flex-row w-full flex-grow">
                     {activeTab === 'profile' && (
-                        <section className="left-sec bg-black w-1/5 p-6">
+                        <section className="left-sec w-1/5 p-6">
                             <h3 className="text-xl font-bold">Harshit Singla</h3>
                             <p className="text-sm mb-2">1.3 Years of experience</p>
                             <ProgressBar progress={40} />
@@ -81,7 +81,7 @@ function Profile() {
                         </section>
                     )}
 
-                    <section className={`right-sec ${activeTab === 'profile' ? 'w-4/5' : 'w-full'} bg-gray-800 p-10`}>
+                    <section className={`right-sec ${activeTab === 'profile' ? 'w-4/5' : 'w-full'} p-10`}>
                         {activeTab === 'profile' && renderProfileContent()}
                         {activeTab === 'courses' && <RecommendedCourses />}
                         {activeTab === 'jobs' && <Jobs />}
