@@ -1,50 +1,49 @@
-import React from "react";
-import NavBar from '../home page/navbar.jsx';
-import jobsData from './jobData.js';
-import Header from "../Header.jsx";
-import { Link } from 'react-router-dom';
-import Categories from '../components/profile page/filterOptions.jsx';
+import React, { useState, useEffect } from "react";
+import JobCard from "./JobCard";
+import JobDetails from "./JobDetails";
+import jobsData from "./jobData";
 
-function Jobs() {
-    return (
-            <section className="flex flex-col items-center">
-                <h2 className="text-left mb-8">Find Your Dream Job</h2>
-                <section className="flex flex-row items-start justify-center max-sm:flex-col">
-                    {/* Make the Categories section sticky */}
-                    <div className="sticky-categories">
-                        <Categories />
-                    </div>
+const JobListingSection = () => {
+  const [selectedJob, setSelectedJob] = useState(null);
 
-                    {/* Job listing section will be scrollable */}
-                    <section className="scrollable-jobs flex flex-col gap-10 items-center">
-                        {jobsData.jobs.map((job, index) => (
-                            <div key={job.id} className="border bg-slate-900 p-5 w-[80%] max-sm:w-full border-slate-500 hover:border-[#833fd4] rounded-2xl">
-                                <h4>{job.title}</h4>
-                                <div className="flex flex-row gap-10 max-sm:gap-1 flex-wrap">
-                                    <p className="font-bold text-lg">{job.company}</p>
-                                    <p className="w-fit p-1 rounded text-sm bg-[#840a26]">{job.salary}</p>
-                                    <p className="w-fit p-1 rounded text-sm bg-[#010d45]">{job.location}</p>
-                                    <p className="w-fit p-1 rounded text-sm bg-[#4c1700]">Job Type: {job.jobType}</p>
-                                </div>
-                                <p>{job.description}</p>
-                                <div className="gap-10 flex flex-row flex-wrap max-sm:gap-1">
-                                    <p className="font-bold text-lg">{job.category}</p>
-                                    <p className="font-bold text-lg">Level: {job.level}</p>
-                                    <div className="bg-gray-900 w-fit p-1 rounded text-sm">
-                                        {job.technicalSkills.map((skill, i) => (
-                                            <span className="font-Stylus" key={i}>{skill}{i < job.technicalSkills.length - 1 ? ', ' : ''}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <Link to='/application'>
-                                <button className="hover:bg-white hover:text-[#833fd4] bg-[#833fd4] py-1 px-3 rounded">Apply Now</button>
-                                </Link>
-                            </div>
-                        ))}
-                    </section>
-                </section>
-            </section>
-    );
-}
+  useEffect(() => {
+    // Select the first job by default when the component mounts
+    if (jobsData.jobs.length > 0) {
+      setSelectedJob(jobsData.jobs[0]);
+    }
+  }, []); // The empty dependency array ensures this runs only once on mount
 
-export default Jobs;
+  const handleJobSelect = (job) => {
+    setSelectedJob(job);
+  };
+
+  return (
+    <section className="flex flex-row items-start justify-center min-h-screen text-white">
+      {/* Left Section - Job Listings */}
+      <div className="left-section w-1/3 bg-gray-900 p-4">
+        <h2 className="text-2xl font-bold mb-4">Job Listings</h2>
+        <div className="job-list">
+          {jobsData.jobs.map((job) => (
+            <JobCard
+              key={job.id}
+              job={job}
+              onSelect={handleJobSelect}
+              isSelected={selectedJob && selectedJob.id === job.id} // Pass isSelected prop
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Right Section - Job Details */}
+      <div className="right-section w-2/3 bg-blue-900 p-4">
+        {selectedJob ? (
+          <JobDetails job={selectedJob} />
+        ) : (
+          <p>Select a job to view details</p>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default JobListingSection;
