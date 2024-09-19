@@ -34,7 +34,7 @@ const jobsData = {
         jobType: "Full-time",
         description: "Cloudify is looking for a Backend Developer to handle the server-side logic and database management for various web applications.",
         level: "Mid-level",
-        technicalSkills: ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"]
+        technicalSkills: ["Node.js", "ExpressJS", "PostgreSQL", "Redis", "Docker"]
       },
       {
         id: "004",

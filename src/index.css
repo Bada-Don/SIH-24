@@ -17,6 +17,10 @@ body {
   /* overflow: hidden; */
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 * {
   color: aliceblue;
   font-family: "Josefin Sans", sans-serif;
