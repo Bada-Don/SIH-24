@@ -1,7 +1,13 @@
 import React from "react";
 import SkillMatch from "./SkillMatch";
+import courses from "./courseListing"; // Import your course data
 
 const JobDetails = ({ job }) => {
+  // Filter courses based on job's technical skills
+  const recommendedCourses = courses.filter((course) =>
+    course.skills.some((skill) => job.technicalSkills.includes(skill))
+  );
+
   return (
     <div className="border bg-slate-900 p-5 w-[100%] h-max border-slate-500 rounded-2xl mb-4">
       <h2 className="text-2xl font-bold mb-2">{job.title}</h2>
@@ -30,6 +36,24 @@ const JobDetails = ({ job }) => {
           ))}
         </ul>
       </div>
+      <div className="mt-4">
+      <h3 className="text-xl font-bold mb-2">Recommended Courses</h3>
+      <div className="flex flex-wrap gap-4"> {/* Use flexbox for layout */}
+        {recommendedCourses.map((course) => (
+          <div 
+            key={course.title} 
+            className="w-80 h-40 rounded-md overflow-hidden shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300" // Add hover effects
+          >
+            <img 
+              src={course.image} 
+              alt={course.title} 
+              className="object-contain" 
+            />
+          </div>
+        ))}
+      </div>
+      </div>
+
     </div>
   );
 };

@@ -7,7 +7,7 @@ function ProfileInfo(){
                         <h4>Profile Photo</h4>
                         <input type="file" name="profilePic" id="profilePic" className='hidden' />
                         <label htmlFor="profilePic" className='w-fit'>
-                            <img className='rounded w-[7rem]' src="https://media.licdn.com/dms/image/v2/D5635AQFHTw9ZRWAl2Q/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1721458863973?e=1726747200&v=beta&t=XYr5eZ3bdTGL184PeEyk1Irt7YtKNOrRSNFyHCuVpKY" alt="" />
+                            <img className='rounded w-[7rem]' src="https://media.licdn.com/dms/image/v2/D5635AQFHTw9ZRWAl2Q/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1721458863973?e=1727380800&v=beta&t=PFw4puiszca14Ub_3-vUSnzWF-w8svH7gEvl9Hy3ai8" alt="" />
                         </label>
                         <br />
                         <h4>Intro Video</h4>
