@@ -49,17 +49,16 @@ const SkillsTable = () => {
   };
 
   const handleSaveClick = () => {
+    setIsModalOpen(true); // Show the modal 
+  };
+
+  const handleAttemptNow = () => {
     const selectedTechnicalSkills = skills
       .filter((skill) => skill.isTechnical)
       .map((skill) => skill.name);
 
     navigate("/test", { state: { selectedSkills: selectedTechnicalSkills } });
-  };
-
-  const handleAttemptNow = () => {
-    setIsModalOpen(false);
-    setAttemptNumber(attemptNumber + 1);
-    setIsResultModalOpen(true);
+    setIsModalOpen(false); // Close the modal after navigation
   };
 
   const handleCloseResultModal = () => {
@@ -148,11 +147,12 @@ const SkillsTable = () => {
         Save
       </button>
 
+      {/* Modal (conditionally rendered) */}
       {isModalOpen && (
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          onAttemptNow={handleAttemptNow}
+          onAttemptNow={handleAttemptNow} 
         />
       )}
       {isResultModalOpen && (
