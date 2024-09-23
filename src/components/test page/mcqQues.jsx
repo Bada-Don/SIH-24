@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const MCQ = ({ question, options, correctAnswer, onScore }) => {
     const [selectedOption, setSelectedOption] = useState(null);
+
+    useEffect(() => {
+        // Submit answer whenever selectedOption changes
+        if (selectedOption !== null) {
+            handleSubmit();
+        }
+    }, [selectedOption]);
 
     const handleOptionChange = (e) => {
         setSelectedOption(e.target.value);
@@ -13,7 +20,7 @@ const MCQ = ({ question, options, correctAnswer, onScore }) => {
         } else {
             onScore(0); 
         }
-        // You might want to add logic to disable the button after submission or provide feedback to the user.
+        // You might want to add logic to disable the radio buttons after submission or provide feedback to the user.
     };
 
     return (
@@ -33,12 +40,7 @@ const MCQ = ({ question, options, correctAnswer, onScore }) => {
                     </label>
                 </div>
             ))}
-            <button 
-                className="bg-purple-600 text-white py-1 px-3 rounded mt-2 hover:bg-purple-700 transition-colors"
-                onClick={handleSubmit}
-            >
-                Submit Answer
-            </button>
+            {/* Remove the Submit Answer button */}
         </div>
     );
 };

@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ShortAnswerQuestion = ({ question, correctAnswer, onScore }) => {
     const [answer, setAnswer] = useState('');
 
+    useEffect(() => {
+        // You might want to add a debounce or delay here to prevent submission on every keystroke
+        handleSubmit(); 
+    }, [answer]);
+
     const handleSubmit = () => {
         // Basic answer checking (case-insensitive)
         if (answer.trim().toLowerCase() === correctAnswer.trim().toLowerCase()) {
-            onScore(100); // Full marks
+            onScore(100); 
         } else {
             onScore(0); 
         }
@@ -21,12 +26,7 @@ const ShortAnswerQuestion = ({ question, correctAnswer, onScore }) => {
                 onChange={(e) => setAnswer(e.target.value)}
                 className="w-full bg-gray-800 text-gray-400 p-2 rounded mb-2" 
             />
-            <button 
-                className="bg-purple-600 text-white py-1 px-3 rounded mt-2 hover:bg-purple-700 transition-colors"
-                onClick={handleSubmit}
-            >
-                Submit Answer
-            </button>
+            {/* Remove the Submit Answer button */}
         </div>
     );
 };
